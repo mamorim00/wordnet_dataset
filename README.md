@@ -1,5 +1,5 @@
 ## Datasets
-This repository contains 3 datasets in csv format: a dataset that only contaains direc relations, a dataset that contians only indirect relations, and a complete dataset. 
+This repository contains 3 datasets in csv format: a dataset that only contains direct relations, a dataset that contains only indirect relations, and a complete dataset. 
 ## Matrices
 This repository includes two matrices that can be used to generate unrelated instances one for holonyms and the other for hypernyms. Each rown (n) and columns (m) in the matrix represents a synset.
 If the index [n,m] has a 1, it means synset[n] has a relationship with synset[m]. 
