@@ -17,7 +17,6 @@ holonym_matrix = load_npz("holonym_matrix.npz")
 # Convert the sparce matrices into full matrices
 hypernym_matrix_full = hypernym_matrix.toarray()
 holonym_matrix_full = holonym_matrix.toarray()
-
 # Create an array of synsets
 synsets = list(wn.all_synsets())
 size = len(synsets)
@@ -26,11 +25,11 @@ size = len(synsets)
 df = pd.DataFrame(columns=['Definição_Synset', 'ID_Synset', 'Definição_Relacionada', 'ID_Relacionada', 'Relacao'])
 
 # Choose the number of unrelated instances 
-total_elements = 150000
+total_elements = 10000
 
 # Initialize tqdm to track progress
 with tqdm(total=total_elements, desc="Processing", unit="element") as pbar:
-    while(len(df)<150000):
+    while(len(df)<total_elements):
       i = random.randint(0, size-1)
       j = random.randint(0, size-1)
       if holonym_matrix_full[i,j] == 0 and hypernym_matrix_full[i,j]==0:
